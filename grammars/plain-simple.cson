@@ -56,10 +56,25 @@
     ]
   'text':
     'patterns': [
+#       {
+#         # Headings
+#         'match': '^(?:\\s*)(\\[\\b.+\\b\\])(?:\\s*)$'
+#         'name': 'text.plain.simple.plainsimple-heading'
+#       }
       {
         # Headings
         'match': '^(?:\\s*)(\\[\\b.+\\b\\])(?:\\s*)$'
         'name': 'text.plain.simple.plainsimple-heading'
+      }
+      {
+        # Red Headings (in parenthesis)
+        'match': '^(?:\\s*)(\\(\\b.+\\b\\))(?:\\s*)$'
+        'name': 'text.plain.simple.plainsimple-heading2'
+      }
+      { 
+        # purplse headings (in curly braces)
+        'match': '^(?:\\s*)(\\{\\b.+\\b\\})(?:\\s*)$'
+        'name': 'text.plain.simple.plainsimple-heading3'
       }
       {
         # Lists
@@ -77,9 +92,19 @@
         'match': '(?:\\s+)([\\*|_]+)(?:(?=(\\\\?))\\2.)*?\\1'
         'name': 'text.plain.simple.plainsimple-emphasize'
       }
+      #{
+      #  # Citations
+      #  'match': '(?<!\\w)[“"\'].*?["”\'](?!\\w)'
+      #  'name': 'constant.other.symbol'
+      #}
       {
-        # Citations
-        'match': '(?<!\\w)[“"\'].*?["”\'](?!\\w)'
+        # double quotes in blue-ish
+        'match': '(?<!\\w)[“"].*?["”](?!\\w)'
         'name': 'constant.other.symbol'
+      }
+      {
+        # single quotes in yellow
+        'match': '(?<!\\w)[\'].*?[\'](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-yy'
       }
     ]
