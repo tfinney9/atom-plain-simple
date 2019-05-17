@@ -52,8 +52,8 @@
         # MAC-addresses
         'match': '([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})'
         'name': 'keyword'
-      }
-    ]
+      }   
+]
   'text':
     'patterns': [
 #       {
@@ -61,21 +61,16 @@
 #         'match': '^(?:\\s*)(\\[\\b.+\\b\\])(?:\\s*)$'
 #         'name': 'text.plain.simple.plainsimple-heading'
 #       }
-      {
-        # Headings
-        'match': '^(?:\\s*)(\\[\\b.+\\b\\])(?:\\s*)$'
-        'name': 'text.plain.simple.plainsimple-heading'
-      }
-      {
-        # Red Headings (in parenthesis)
-        'match': '^(?:\\s*)(\\(\\b.+\\b\\))(?:\\s*)$'
-        'name': 'text.plain.simple.plainsimple-heading2'
-      }
-      { 
-        # purplse headings (in curly braces)
-        'match': '^(?:\\s*)(\\{\\b.+\\b\\})(?:\\s*)$'
-        'name': 'text.plain.simple.plainsimple-heading3'
-      }
+# #       {
+# #         # Headings2
+# #         'match': '^(?:\\s*)(\\(\\b.+\\b\\))(?:\\s*)$'
+# #         'name': 'text.plain.simple.plainsimple-heading2'
+# #       }
+#       { 
+#         # Headings3
+#         'match': '^(?:\\s*)(\\{\\b.+\\b\\})(?:\\s*)$'
+#         'name': 'text.plain.simple.plainsimple-heading3'
+#       }
       {
         # Lists
         'match': '^\\s*(\\*+|\\d+(?:\\.\\d+)*\\)|(?:\\d+\\.)+|§+\\s\\d+(?:\\.\\d+)*|§+|§+\\d+(?:\\.\\d+)*)?\\s+'
@@ -98,13 +93,28 @@
       #  'name': 'constant.other.symbol'
       #}
       {
-        # double quotes in blue-ish
+        # Citations0
         'match': '(?<!\\w)[“"].*?["”](?!\\w)'
         'name': 'constant.other.symbol'
       }
       {
-        # single quotes in yellow
+        # Citations1
         'match': '(?<!\\w)[\'].*?[\'](?!\\w)'
         'name': 'text.plain.simple.plainsimple-yy'
+      }
+      {
+        # Citations2
+        'match': '(?<!\\w)[\(].*?[\)](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-heading2'
+      }
+      {
+        # Citations3
+        'match': '(?<!\\w)[\\[].*?[\\]](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-heading'
+      }
+      {
+        # Citations4
+        'match': '(?<!\\w)[\{].*?[\}](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-heading3'
       }
     ]
