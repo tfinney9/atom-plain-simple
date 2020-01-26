@@ -93,28 +93,48 @@
       #  'name': 'constant.other.symbol'
       #}
       {
-        # Citations0
-        'match': '(?<!\\w)[“"].*?["”](?!\\w)'
+        # Citations0 - doubles quotes
+        'match': '(?<!\\w)[“"].*?["”](?!\\w)' 
         'name': 'constant.other.symbol'
       }
       {
-        # Citations1
+        # Citations1 - single quotes
         'match': '(?<!\\w)[\'].*?[\'](?!\\w)'
         'name': 'text.plain.simple.plainsimple-yy'
       }
       {
-        # Citations2
+        # Citations2 - parenthesis
         'match': '(?<!\\w)[\(].*?[\)](?!\\w)'
         'name': 'text.plain.simple.plainsimple-heading2'
       }
       {
-        # Citations3
+        # Citations3  - square braces
         'match': '(?<!\\w)[\\[].*?[\\]](?!\\w)'
         'name': 'text.plain.simple.plainsimple-heading'
       }
       {
-        # Citations4
+        # Citations4 - curly braces
         'match': '(?<!\\w)[\{].*?[\}](?!\\w)'
         'name': 'text.plain.simple.plainsimple-heading3'
       }
+      {
+        # Hash comment
+        #'match': '(?<!\\w)[\{].*?[\}](?!\\w)'
+#         'match': '(?<!\\w)[#].*?'
+        'match' : '(?<!\\w)[#].*?[\n](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-hash-comment'
+      }
+      {
+        # c-style (//) comment
+        #'match': '(?<!\\w)[\{].*?[\}](?!\\w)'
+#         'match': '(?<!\\w)[#].*?'
+        'match' : '(?<!\\w)(\/\/).*?[\n](?!\\w)'
+        'name': 'text.plain.simple.plainsimple-hash-comment'
+      }
+#       {
+#        'match' : '(\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)|(\/\/.*)'
+#        'name' : 'text.plain.simple.plainsimple-hash-comment'
+#       }
     ]
+      
+      
